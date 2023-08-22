@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title> 정보 입력 </title>
+    <style>
+        html body {
+            background-color: #EDEEE9;
+            color: #303030;
+            font-family: "Inter", sans-serif;
+            min-height: 100vh;
+            width: 100%;
+            padding: 2.5vh 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        html body h1 {
+            font-size: clamp(1rem, 6vw, 10rem);
+            margin: 15vh 0 2rem;
+        }
+
+        html body .explanation ul li {
+            list-style: none;
+            position: relative;
+            margin: 0.5rem 0;
+        }
+
+        html body .container {
+            width: 100%;
+            max-width: 768px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 2rem 1.5rem;
+            background-color: #D8DBCE;
+        }
+
+        html .form__input {
+            width: clamp(120px, 50vw, 420px);
+            height: 2.5rem;
+            padding: 0 1.25rem;
+            border: 1px solid #303030;
+            border-radius: 2px;
+            margin: 0.625rem auto;
+            transition: all 250ms;
+        }
+
+        html .form__input:focus + .form__label, html .form__input:not(:placeholder-shown) + .form__label {
+            transform: translateY(-4.5rem) scale(1);
+            color: #303030;
+        }
+
+        html .form__label {
+            font-size: 1rem;
+            color: #909090;
+            display: block;
+            transform: translate(1.25rem, -2.5rem);
+            transform-origin: 0 0;
+            transition: all 500ms;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<body>
+<h1> 정보를 입력해주세요 </h1>
+<div class="container">
+    <div class="cta-form">
+        <h2> 형식에 맞춰 입력해주세요 </h2>
+    </div>
+    <form action="localhost:8090/board/write" class="form">
+
+        <input type="text" class="form__input" id="number" placeholder=" "/>
+        <label for="number" class="form__label">주민등록번호</label>
+
+        <input type="text"  class="form__input" id="blood" placeholder=" "/>
+        <label for="blood" class="form__label">혈액형</label>
+
+        <div id="idSub">
+            <input type="submit" value=" 전송 " onclick="mChk();">
+        </div>
+    </form>
+</div>
+</html>

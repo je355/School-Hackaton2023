@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 정보 </title>
+
+    <style>
+        h2{color: green; }
+
+
+        .cls1{display: inline-block;
+            width: 6%;
+            text-align: right;
+            color: rgb(0, 154, 121)}
+
+        #idSub{
+            position: relative;
+            left: 200px;
+        }
+    </style>
+
+    <script>
+      
+
+    </script>
+</head>
+
+<body>
+    <h2> &nbsp; &nbsp; 정보를 입력해 주세요 </h2>
+    <form name="fm" method="post" action="" onsubmit="return false;">
+      
+       
+        <div>
+            <label class="cls1">주민등록번호 </label>
+            <input type="text" id="idNum" name="num">
+        </div>
+
+        <br>
+
+        <div>
+            <label class="cls1"> &nbsp; 혈액형 </label>
+            <input type="text" id="idBlood" name="num">
+        </div>
+
+        <br>
+        
+        <div id="idSub">
+             <input type="submit" value="전송" onclick="mChk();">
+        </div>
+       
+
+    </form>
+</body>
+</html>
